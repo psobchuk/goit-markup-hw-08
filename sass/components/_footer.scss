@@ -1,0 +1,31 @@
+.footer {
+  background-color: var(--dark-bgc);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__container {
+  display: flex;
+  gap: 93px;
+  align-items: baseline;
+}
+
+// Заголовок для темного фону
+.dark-bg-title {
+  display: block;
+
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
+  letter-spacing: var(--ls-3);
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  color: var(--light-txt-color);
+}

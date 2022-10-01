@@ -1,0 +1,51 @@
+// Блок навігації
+.nav {
+  margin-right: auto;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 28px 0;
+  font-weight: 500;
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
+  letter-spacing: var(--ls-2);
+  color: var(--main-txt-color);
+
+  position: relative;
+  transition: color 250ms var(--timing-function);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-bgc);
+
+    position: absolute;
+    left: 0;
+    bottom: -4.5px;
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function);
+  }
+
+  &--current::after,
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &--current,
+  &:hover,
+  &:focus {
+    color: var(--accent-txt-color);
+  }
+}

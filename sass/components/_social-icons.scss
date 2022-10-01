@@ -1,0 +1,40 @@
+// Соціальні кнопки
+.social.list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: var(--social-bgc);
+
+  transition: background-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-bgc);
+    fill: var(--main-bgc);
+  }
+
+  &:hover .social__icon,
+  &:focus .social__icon {
+    fill: var(--main-bgc);
+  }
+
+  &--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &--dark .social__icon {
+    fill: var(--main-bgc);
+  }
+}

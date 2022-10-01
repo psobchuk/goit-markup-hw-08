@@ -1,0 +1,19 @@
+/* Логотип */
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: var(--bold-f);
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: var(--ls-3);
+  color: var(--accent-txt-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &__dark {
+    color: var(--dark-txt-color);
+  }
+
+  &__light {
+    color: var(--light-txt-color);
+  }
+}

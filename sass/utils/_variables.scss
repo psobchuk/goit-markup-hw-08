@@ -1,0 +1,49 @@
+:root {
+  /* Шрифти */
+  --main-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+
+  /* Відстань між літерами */
+  --ls-6: 0.06em;
+  --ls-3: 0.03em;
+  --ls-2: 0.02em;
+
+  /* Розміри та жирність шрифту */
+  --main-txt-size: 14px;
+  --bold-f: 700;
+  --line-h: calc(16 / 14);
+
+  /* Кольори тексту */
+  --main-txt-color: #212121;
+  --secondary-txt-color: #757575;
+  --accent-txt-color: #2196f3;
+  --light-txt-color: #ffffff;
+  --dark-txt-color: #000000;
+  --contacts-txt-color: rgba(255, 255, 255, 0.6);
+
+  /* Кольори фону */
+  --main-bgc: #ffffff;
+  --dark-bgc: #2f303a;
+  --light-bgc: #f5f4fa;
+  --accent-bgc: #2196f3;
+  --accent-bgc-hover: #188ce8;
+  --social-bgc: #afb1b8;
+  --social-dark-bgc: #646464;
+
+  /* Кольори рамок */
+  --social-brd: #afb1b8;
+  --accent-brd: #2196f3;
+
+  /* Сітки */
+  --indent: 30px;
+  --items: 3;
+
+  /* Анімації */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-txt-color);
+  background-color: var(--main-bgc);
+}
