@@ -719,7 +719,7 @@ img {
 .footer__container {
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
