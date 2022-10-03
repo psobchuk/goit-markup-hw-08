@@ -11,9 +11,20 @@
 }
 
 .footer__container {
-  display: flex;
-  gap: 93px;
-  align-items: baseline;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 93px;
+    align-items: baseline;
+    text-align: left;
+  }
 }
 
 // Заголовок для темного фону
@@ -26,6 +37,108 @@
   text-transform: uppercase;
 
   margin-bottom: 20px;
-
   color: var(--light-txt-color);
+}
+
+// Контакти
+.contacts {
+  margin-bottom: 60px;
+}
+
+.contacts__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__map-link {
+  font-size: var(--main-txt-size);
+  line-height: calc(24 / 14);
+  letter-spacing: var(--ls-3);
+  color: var(--light-txt-color);
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.contacts__mail-link,
+.contacts__tel-link {
+  @extend .contacts__map-link;
+  color: var(--contacts-txt-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt-color);
+  }
+}
+
+.dark-bg-social {
+  margin-bottom: 60px;
+}
+
+.subscribe {
+  width: 100%;
+}
+
+.subscribe-block {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+// Форма підписки
+.subscribe-form__input {
+  min-width: 100%;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+    margin-right: 12px;
+  }
+}
+
+.subscribe-form__button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  margin: 0 auto;
+  background-color: var(--accent-bgc);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--light-txt-color);
+  font-size: 16px;
+  font-weight: var(--bold-f);
+  line-height: calc(30 / 16);
+  letter-spacing: var(--ls-6);
+
+  transition: opacity 250ms var(--timing-function);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.subscribe-form__icon {
+  margin-left: 10px;
 }
