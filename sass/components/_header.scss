@@ -5,7 +5,13 @@
 .header-container {
   display: flex;
   align-items: center;
-  @media screen and (max-width: 1200px) {
+  padding: 16px 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
     justify-content: space-between;
   }
 }
@@ -93,7 +99,9 @@
 
 .nav__list {
   display: flex;
-  gap: 50px;
+  @media screen and (max-width: 1199px) {
+    gap: 50px;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -123,9 +131,13 @@
 
     position: absolute;
     left: 0;
-    bottom: -4.5px;
+    bottom: 0;
     opacity: 0;
     transition: opacity 250ms var(--timing-function);
+
+    @media screen and (min-width: 1200px) {
+      bottom: -4.5px;
+    }
   }
 
   &--current::after,
