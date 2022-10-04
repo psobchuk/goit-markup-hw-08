@@ -1,14 +1,17 @@
 // Блок навігації
 .nav {
-  margin-right: auto;
-
-  &__list {
-    display: flex;
+  @media screen and (max-width: 1200px) {
+    display: none;
+    margin-right: auto;
   }
+}
 
-  &__item:not(:first-child) {
-    margin-left: 50px;
-  }
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 50px;
 }
 
 .nav__link {
