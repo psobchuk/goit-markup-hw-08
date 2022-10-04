@@ -1,6 +1,7 @@
 // Фільтр проектів
 .projects__filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
