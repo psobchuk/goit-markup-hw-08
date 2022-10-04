@@ -1,6 +1,8 @@
 // Особливості
 .features {
-  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .features__list {
