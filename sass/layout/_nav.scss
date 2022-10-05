@@ -1,17 +1,26 @@
 // Блок навігації
 .nav {
-  @media screen and (max-width: 1200px) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: auto;
   }
 }
 
 .nav__list {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    gap: 50px;
+  }
 }
 
-.nav__item:not(:first-child) {
-  margin-left: 50px;
+.nav__item:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link {
@@ -35,9 +44,13 @@
 
     position: absolute;
     left: 0;
-    bottom: -4.5px;
+    bottom: 0;
     opacity: 0;
     transition: opacity 250ms var(--timing-function);
+
+    @media screen and (min-width: 1200px) {
+      bottom: -4.5px;
+    }
   }
 
   &--current::after,
