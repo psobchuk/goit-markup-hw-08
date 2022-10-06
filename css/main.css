@@ -572,6 +572,11 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-bottom: 0;
+  }
+}
 
 .footer-title {
   display: block;
