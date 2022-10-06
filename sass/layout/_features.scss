@@ -5,24 +5,18 @@
   }
 }
 
-.features__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
 .features__item {
-  margin: 15px;
+  --items: 1;
   margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 4 * 15px) / 2);
+    --items: 2;
+    // flex-basis: calc((100% - 4 * 15px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 8 * 15px) / 4);
+    --items: 4;
+    // flex-basis: calc((100% - 8 * 15px) / 4);
   }
 }
 

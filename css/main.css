@@ -1,18 +1,4 @@
 @charset "UTF-8";
-.cards-set {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.cards-set-item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -136,6 +122,20 @@ body {
   position: absolute;
   width: 0;
   white-space: nowrap;
+}
+
+.cards-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.cards-set-item {
+  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .header {
@@ -408,31 +408,18 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .features__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
 .features__item {
-  margin: 15px;
+  --items: 1;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .features__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
+    --items: 2;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
-    -ms-flex-preferred-size: calc((100% - 120px) / 4);
-        flex-basis: calc((100% - 120px) / 4);
+    --items: 4;
   }
 }
 
@@ -510,7 +497,17 @@ body {
 }
 
 .team__list {
-  --items: 4;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    --items: 4;
+  }
 }
 
 .team__item {
@@ -542,31 +539,18 @@ body {
   margin-bottom: 16px;
 }
 
-.client__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
-}
-
 .client__item {
   height: 92px;
-  margin: 15px;
-  -ms-flex-preferred-size: calc((100% - 60px) / 2);
-      flex-basis: calc((100% - 60px) / 2);
+  --items: 2;
 }
 @media screen and (min-width: 768px) {
   .client__item {
-    -ms-flex-preferred-size: calc((100% - 90px) / 3);
-        flex-basis: calc((100% - 90px) / 3);
+    --items: 3;
   }
 }
 @media screen and (min-width: 1200px) {
   .client__item {
-    -ms-flex-preferred-size: calc((100% - 180px) / 6);
-        flex-basis: calc((100% - 180px) / 6);
+    --items: 6;
   }
 }
 
@@ -754,11 +738,24 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .projects__filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__filter {
+    margin-bottom: 50px;
+  }
 }
 
 .projects__button {
@@ -785,8 +782,28 @@ body {
           box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.projects__card {
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .projects__card {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__card {
+    --items: 3;
+  }
+}
+
 .projects__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
 }
 .projects__link:hover, .projects__link:focus {
@@ -798,6 +815,9 @@ body {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .projects__name {

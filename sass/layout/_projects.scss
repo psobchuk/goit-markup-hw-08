@@ -2,9 +2,18 @@
 .projects__filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .projects__button {
@@ -37,8 +46,22 @@
 }
 
 // Проекти
+.projects__card {
+  --items: 1;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
+}
+
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  // display: block;
   text-decoration: none;
 
   &:hover,
@@ -52,6 +75,7 @@
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
+  flex-grow: 1;
 }
 
 .projects__name {

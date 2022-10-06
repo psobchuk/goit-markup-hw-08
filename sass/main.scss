@@ -1,5 +1,4 @@
 // Стилі base
-@import "./base/cards-set";
 @import "./base/container";
 @import "./base/reset";
 @import "./base/section";
@@ -7,6 +6,7 @@
 // Стилі utils
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/cards-set";
 
 // Стилі layout
 @import "./layout/header";
