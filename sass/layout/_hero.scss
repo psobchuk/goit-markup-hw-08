@@ -77,24 +77,5 @@
 }
 
 .hero__button {
-  background-color: var(--accent-bgc);
-  font-family: inherit;
-  font-weight: var(--bold-f);
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: var(--ls-6);
-  color: var(--light-txt-color);
-
   padding: 8px 30px;
-  border-radius: 4px;
-  border-width: 0;
-
-  transition: background-color 250ms var(--timing-function),
-    color 250ms var(--timing-function);
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: var(--accent-bgc-hover);
-  }
 }

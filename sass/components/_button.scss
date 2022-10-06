@@ -1,0 +1,19 @@
+.button {
+  font-weight: var(--bold-f);
+  line-height: calc(30 / 16);
+  letter-spacing: var(--ls-6);
+  color: var(--light-txt-color);
+  background-color: var(--accent-bgc);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--accent-bgc-hover);
+  }
+}

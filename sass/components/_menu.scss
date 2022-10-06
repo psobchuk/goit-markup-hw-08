@@ -58,6 +58,7 @@
   letter-spacing: var(--ls-2);
 
   color: var(--main-txt-color);
+  transition: color 250ms var(--timing-function);
 
   &:hover {
     color: var(--accent-txt-color);
@@ -76,9 +77,10 @@
   font-weight: 500;
   letter-spacing: var(--ls-2);
   color: var(--secondary-txt-color);
+  transition: color 250ms var(--timing-function);
 
   &.tel {
-    font-size: 34px;
+    font-size: 7.2vw;
     line-height: calc(40 / 34);
   }
 
@@ -93,17 +95,22 @@
 }
 
 .mobile-soc__item {
-  font-size: 18px;
-  line-height: calc(22 / 18);
-  color: var(--accent-txt-color);
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
   &:not(:first-child) {
     padding-left: 10px;
   }
   &:last-child {
-    border: 0;
+    border: none;
   }
+}
+
+.mobile-soc__link {
+  display: block;
+  font-size: 3.75vw;
+  line-height: calc(22 / 18);
+  color: var(--accent-txt-color);
+  transition: color 250ms var(--timing-function);
 }
 
 .menu-toggle {

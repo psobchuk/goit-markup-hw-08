@@ -5,7 +5,7 @@
   padding-bottom: 60px;
 }
 
-.footer__logo {
+.footer-title {
   display: block;
   margin-bottom: 20px;
 }
@@ -29,10 +29,8 @@
 
 // Заголовок для темного фону
 .dark-bg-title {
-  display: block;
-
   font-size: var(--main-txt-size);
-  line-height: var(--line-h);
+  font-weight: 700;
   letter-spacing: var(--ls-3);
   text-transform: uppercase;
 
@@ -97,9 +95,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 16px;
+  margin-bottom: 20px;
 
   background-color: transparent;
-  margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
     min-width: 450px;
@@ -108,31 +106,17 @@
   @media screen and (min-width: 1200px) {
     min-width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
 .subscribe-form__button {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   width: 200px;
   height: 50px;
   padding: 10px 28px;
-  margin: 0 auto;
-  background-color: var(--accent-bgc);
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--light-txt-color);
-  font-size: 16px;
-  font-weight: var(--bold-f);
-  line-height: calc(30 / 16);
-  letter-spacing: var(--ls-6);
-
-  transition: opacity 250ms var(--timing-function);
-
-  &:hover {
-    cursor: pointer;
-  }
 
   @media screen and (min-width: 1200px) {
     margin: 0;
