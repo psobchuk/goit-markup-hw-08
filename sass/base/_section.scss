@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -15,14 +15,14 @@
   text-align: center;
   letter-spacing: var(--ls-3);
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     font-size: 36px;
     line-height: calc(42 / 36);
   }
 
   margin-bottom: 30px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }
