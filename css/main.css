@@ -334,7 +334,8 @@ body {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/index/hero/hero@2x-sm.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index/hero/hero@2x-sm.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/hero/hero@2x-sm.jpg");
   }
 }
 .hero .container {
@@ -350,7 +351,8 @@ body {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/index/hero/hero@2x-md.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index/hero/hero@2x-md.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/hero/hero@2x-md.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -362,7 +364,8 @@ body {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/index/hero/hero@2x-lg.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index/hero/hero@2x-lg.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/hero/hero@2x-lg.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -435,7 +438,13 @@ body {
   line-height: var(--line-h);
   letter-spacing: var(--ls-3);
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__desc {
@@ -1069,7 +1078,7 @@ body {
   color: var(--light-txt-color);
 }
 
-.menu-btn {
+.menu-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1081,12 +1090,12 @@ body {
           justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .menu-btn {
+  .menu-button {
     display: none;
   }
 }
@@ -1125,23 +1134,26 @@ body {
 
 .mobile-menu__item {
   margin-bottom: 32px;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .mobile-menu__item:last-child {
   margin-bottom: 0;
 }
 
+.mobile-contact__link, .mobile-menu__link {
+  font-weight: 500;
+  letter-spacing: var(--ls-2);
+}
+.mobile-contact__link:hover, .mobile-menu__link:hover, .mobile-contact__link:focus, .mobile-menu__link:focus {
+  color: var(--accent-txt-color);
+}
+
 .mobile-menu__link {
   display: block;
-  font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
-  letter-spacing: var(--ls-2);
   color: var(--main-txt-color);
-  -webkit-transition: color 250ms var(--timing-function);
-  transition: color 250ms var(--timing-function);
-}
-.mobile-menu__link:hover {
-  color: var(--accent-txt-color);
 }
 
 .mobile-contact {
@@ -1150,14 +1162,12 @@ body {
 
 .mobile-contact__item {
   margin-bottom: 32px;
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .mobile-contact__link {
-  font-weight: 500;
-  letter-spacing: var(--ls-2);
   color: var(--secondary-txt-color);
-  -webkit-transition: color 250ms var(--timing-function);
-  transition: color 250ms var(--timing-function);
 }
 .mobile-contact__link.tel {
   font-size: 7.2vw;
