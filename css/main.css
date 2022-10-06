@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .container {
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -510,20 +511,21 @@ body {
   padding: 30px;
 }
 
-.team__title {
+.team__desc, .team__title {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.1875;
   text-align: center;
   letter-spacing: var(--ls-3);
+}
+
+.team__title {
+  font-size: 16px;
+  line-height: 1.1875;
   margin-bottom: 10px;
 }
 
 .team__desc {
   font-weight: 500;
   line-height: 1.1875;
-  text-align: center;
-  letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
   margin-bottom: 16px;
 }
