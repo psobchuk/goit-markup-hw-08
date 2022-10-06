@@ -2,10 +2,10 @@
 .nav {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: block;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-right: auto;
   }
 }
@@ -18,7 +18,7 @@
 }
 
 .nav__item:not(:last-child) {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 50px;
   }
 }
@@ -48,7 +48,7 @@
     opacity: 0;
     transition: opacity 250ms var(--timing-function);
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       bottom: -4.5px;
     }
   }

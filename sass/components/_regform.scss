@@ -93,7 +93,7 @@
 
   color: var(--secondary-txt-color);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: var(--main-txt-size);
   }
 }
@@ -102,7 +102,7 @@
   font-size: 12px;
   color: var(--accent-txt-color);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: var(--main-txt-size);
   }
 }
