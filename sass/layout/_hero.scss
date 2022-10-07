@@ -2,8 +2,10 @@
   padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--dark-bgc);
+
   text-align: center;
+
+  background-color: var(--dark-bgc);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -73,18 +75,20 @@
 }
 
 .hero__title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 26px;
   line-height: calc(42 / 26);
   letter-spacing: var(--ls-6);
   text-transform: uppercase;
   color: var(--main-bgc);
-  margin-bottom: 30px;
 
   @media screen and (min-width: $desktop) {
+    margin-bottom: 45px;
+
     font-size: 44px;
     line-height: calc(60 / 44);
-    margin-bottom: 45px;
   }
 }
 

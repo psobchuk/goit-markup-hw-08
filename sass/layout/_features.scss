@@ -24,20 +24,21 @@
   align-items: center;
 
   height: 120px;
-  background-color: var(--light-bgc);
   margin-bottom: 30px;
+
+  background-color: var(--light-bgc);
   border-radius: 4px;
 }
 
 .features__title {
   display: block;
+  margin-bottom: 10px;
 
   font-size: var(--main-txt-size);
   line-height: var(--line-h);
   letter-spacing: var(--ls-3);
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
 
   @media screen and (min-width: $tablet) {
     text-align: left;

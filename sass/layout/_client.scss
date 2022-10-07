@@ -18,8 +18,10 @@
   justify-content: center;
   align-items: center;
   height: 92px;
+
   border: 1px solid var(--social-brd);
   border-radius: 4px;
+
   fill: var(--social-bgc);
 
   transition: fill 250ms var(--timing-function),

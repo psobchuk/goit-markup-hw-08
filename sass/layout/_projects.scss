@@ -61,7 +61,7 @@
 .projects__link {
   display: flex;
   flex-direction: column;
-  // display: block;
+
   text-decoration: none;
 
   &:hover,
@@ -73,6 +73,7 @@
 
 .projects__desc {
   padding: 20px 24px;
+
   border: 1px solid #eeeeee;
   border-top: none;
 
@@ -82,10 +83,11 @@
 }
 
 .projects__name {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: var(--ls-6);
-  margin-bottom: 4px;
   color: var(--main-txt-color);
 }
 
@@ -104,14 +106,15 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+  padding: 63px 24px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);

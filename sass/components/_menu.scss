@@ -44,6 +44,7 @@
 
 .mobile-menu__item {
   margin-bottom: 32px;
+
   transition: color 250ms var(--timing-function);
 
   &:last-child {
@@ -64,6 +65,7 @@
 .mobile-menu__link {
   @extend %mobile;
   display: block;
+
   font-size: 40px;
   line-height: calc(47 / 40);
 
@@ -76,6 +78,7 @@
 
 .mobile-contact__item {
   margin-bottom: 32px;
+
   transition: color 250ms var(--timing-function);
 }
 
@@ -99,11 +102,14 @@
 }
 
 .mobile-soc__item {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
   &:not(:first-child) {
     padding-left: 10px;
   }
+
   &:last-child {
     border: none;
   }
@@ -111,9 +117,11 @@
 
 .mobile-soc__link {
   display: block;
+
   font-size: 3.75vw;
   line-height: calc(22 / 18);
   color: var(--accent-txt-color);
+
   transition: color 250ms var(--timing-function);
 }
 
